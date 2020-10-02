@@ -4,6 +4,8 @@ require('dotenv').config();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
+const port = process.env.PORT || 4000;
+
 const app = express();
 
 app.use(cors());
@@ -64,6 +66,6 @@ client.connect((err) => {
   console.log('connected');
 });
 
-app.listen(4000, () => {
+app.listen(port, () => {
   console.log('listening....');
 });
